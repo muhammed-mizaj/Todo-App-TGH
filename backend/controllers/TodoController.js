@@ -74,6 +74,18 @@ const FinishTodo = asyncHandler(async(req,res)=>{
     const UpdatedTodo = await Todo.findByIdAndUpdate(req.params.id,{is_finished:!is_finished},{new:true})
     res.status(200).json(UpdatedTodo)
 })
+
+//Report 
+const Report = asyncHandler(async(req,res)=>{
+    const finished_todos = await Todo.find({user:req.user.id,is_finished:true})
+    const cancelled_todos = await Todo.find({user:req.user.id,is_cancelled:true})
+    const pending_todos = await Todo.find({user:req.user.id,is_cancelled:false,is_finished:false})
+    res.status(200).json({
+        finished_todos:finished_todos,
+        cancelled_todos:cancelled_todos,
+        pending_todos:pending_todos
+    })
+})
 module.exports ={
-    getTodos,CreateTodo,UpdateTodo,DeleteTodo,CancelTodo,FinishTodo
+    getTodos,CreateTodo,UpdateTodo,DeleteTodo,CancelTodo,FinishTodo,Report
 }
