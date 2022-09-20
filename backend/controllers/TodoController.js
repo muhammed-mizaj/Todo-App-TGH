@@ -1,6 +1,4 @@
 const asyncHandler = require('express-async-handler')
-const goalModel = require('../../../node js/backend/models/goalModel')
-
 const Todo = require('../models/TodoModel')
 
 //GET ALL TODOS
