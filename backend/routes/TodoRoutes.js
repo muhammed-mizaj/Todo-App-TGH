@@ -1,19 +1,21 @@
 const express = require('express')
 const router = express.Router()
 const {getTodos,CreateTodo,UpdateTodo,DeleteTodo,CancelTodo,FinishTodo}  = require('../controllers/TodoController')
+const {protect} =  require('../middleware/authMiddleware')
 
 //ENDPOINTS
-router.get('/',getTodos)
 
-router.post('/',CreateTodo)
+router.get("/",protect,getTodos)
 
-router.delete('/delete/:id',DeleteTodo)
+router.post('/',protect,CreateTodo)
 
-router.put('/update/:id',UpdateTodo)
+router.delete('/delete/:id',protect,DeleteTodo)
 
-router.put('/cancel/:id',CancelTodo)
+router.put('/update/:id',protect,UpdateTodo)
 
-router.put('/finish/:id',FinishTodo)
+router.put('/cancel/:id',protect,CancelTodo)
+
+router.put('/finish/:id',protect,FinishTodo)
 
 
 

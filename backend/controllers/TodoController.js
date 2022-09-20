@@ -1,9 +1,11 @@
 const asyncHandler = require('express-async-handler')
 const Todo = require('../models/TodoModel')
+const User = require('../models/UserModel')
+
 
 //GET ALL TODOS
 const getTodos = asyncHandler(async(req,res)=>{
-    const todos = await Todo.find()
+    const todos = await Todo.find({user:req.user._id})    
     res.status(200).json(todos)
     
 })
@@ -17,6 +19,7 @@ const CreateTodo = asyncHandler(async(req,res)=>{
     }
     
     const todo = await Todo.create({
+        user:req.user._id,
         title,
         priority
     })
