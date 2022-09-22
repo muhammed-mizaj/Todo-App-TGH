@@ -4,8 +4,9 @@ const {getTodos,CreateTodo,UpdateTodo,DeleteTodo,CancelTodo,FinishTodo,Report}  
 const {protect} =  require('../middleware/authMiddleware')
 
 //ENDPOINTS
-
+ 
 router.get('/',protect,getTodos)
+
 
 router.post('/',protect,CreateTodo)
 

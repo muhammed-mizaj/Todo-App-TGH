@@ -53,7 +53,7 @@ const DeleteTodo = asyncHandler(async(req,res)=>{
 const CancelTodo = asyncHandler(async(req,res)=>{
     
     const todo = await Todo.findById(req.params.id)
-    const is_cancelled = todo.is_finished
+    const is_cancelled = todo.is_cancelled
     if(!todo)
     {
         res.status(400).json({error:"No Todo Found"})
