@@ -1,5 +1,5 @@
 import React from 'react'
-const BASE_URL = 'http://localhost:8000/api/todos'
+const BASE_URL = 'https://1870-20-249-56-174.jp.ngrok.io/api/todos'
 import axios from 'axios'
 let handleFinished = (fid)=>{
     axios.put(BASE_URL+`/finish/${fid}`,{data:{}},{headers: {Authorization:`Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMjk2YzhkNzY2ODcwMzk5YjIxMTc5NCIsImlhdCI6MTY2MzY5NjI5NywiZXhwIjoxNjY2Mjg4Mjk3fQ.C7Xg-w6RSZlZn03XpwIyjpjEwOYEBkkFV5M0VJvRDoA`}}
