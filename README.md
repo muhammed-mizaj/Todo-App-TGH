@@ -7,7 +7,7 @@ Hosted URLS
 
 2. Backend (ngrok)= https://1870-20-249-56-174.jp.ngrok.io
 
-3.Server(Azure) = 20.249.56.174
+3. Server(Azure) = 20.249.56.174
 ---
 ### Models
 - User
