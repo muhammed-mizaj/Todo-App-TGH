@@ -2,6 +2,13 @@
 
 MERN Stack App for TGH-Tech Internship Test 
 ---
+Hosted URLS
+1. Frontend = https://todo-app-tgh-git-deploy-mdthegamer.vercel.app/
+
+2. Backend (ngrok)= https://1870-20-249-56-174.jp.ngrok.io
+
+3.Server(Azure) = 20.249.56.174
+---
 ### Models
 - User
 ```
