@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import TodoCard from '../components/TodoCard';
-const BASE_URL = "https://64be-20-249-56-174.jp.ngrok.io/api/todos"
+const BASE_URL = "https://4cde-2401-4900-332b-9d70-cf84-2af8-b3d5-3079.in.ngrok.io/api/todos"
 const TodoList = () => {
   const [todos,SetTodos]=useState([])
   const [finishedtodos,SetFTodos]=useState([])
